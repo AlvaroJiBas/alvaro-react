@@ -1,14 +1,18 @@
 import React from "react";
 import styles from "./ProfileCard.module.css"
-const ProfileCard = ({ nombre, edad, bio, profileImage }) => {
+const ProfileCard = ({id, nombre, edad, bio, profileImage }) => {
 
   return (    
-        <div className={styles.card}>
-
-        <h1 className={styles.nombre}> {nombre}</h1>
-        <p className={styles.edad}> Edad: {edad}</p>
-        <img src={profileImage} className={styles.image}/>
-        <p className={styles.bio}> {bio}</p>
+        <div id ={id} className={styles.card}>
+          <img src={profileImage} className={styles.image}/>
+            <div className={styles.info}>
+        
+            <h1 className={styles.nombre}> {nombre}</h1>
+            <p className={styles.edad}> Edad: {edad}</p>
+     
+            <p className={styles.bio}> {bio}</p>
+            </div>
+        
         </div>
     )
 }
